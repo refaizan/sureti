@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.SignInActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_cv_check_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sign_in_cv_check_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="@string/txt_sign_in"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="@string/txt_policyholder_account"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/AppTheme.EditText"
+                android:hint="@string/txt_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/purple_200">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_in_edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:textColor="@color/purple_200" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/product_sans_regular"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/txt_forgot_password"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_in_btn_next"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:backgroundTint="@color/orange_color"
+                android:fontFamily="@font/product_sans_regular"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="@string/txt_sign_in"
+                android:textColor="@color/dark_gray_color"
+                android:textSize="@dimen/_12sdp"
+                app:cornerRadius="@dimen/_20sdp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/sign_in_circle_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splash_circle_top" />
+
+    <ImageView
+        android:id="@+id/sign_in_bar_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:translationY="@dimen/_minus60sdp"
+        app:layout_constraintEnd_toEndOf="@id/sign_in_circle_top"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="@id/sign_in_circle_top"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_circle_top"
+        app:srcCompat="@drawable/splash_bar_top" />
+
+    <ImageView
+        android:id="@+id/sign_in_circle_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/splash_circle_bottom" />
+
+    <ImageView
+        android:id="@+id/sign_in_bar_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:translationY="@dimen/_35sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_circle_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/sign_in_circle_bottom"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_circle_bottom"
+        app:srcCompat="@drawable/splash_bar_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

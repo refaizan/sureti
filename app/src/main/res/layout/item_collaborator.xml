@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_40sdp"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_50sdp"
+    app:strokeColor="@color/purple_200"
+    app:strokeWidth="2dp">
+
+    <TextView
+        android:id="@+id/item_collaborator_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/product_sans_regular"
+        android:textAllCaps="true"
+        android:maxLength="2"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/_22sdp" />
+
+    <ImageView
+        android:id="@+id/item_collaborator_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</com.google.android.material.card.MaterialCardView>
